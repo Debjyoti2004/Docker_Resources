@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debjyoti Shit - DevOps & Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .main-nav a:hover:not(.active) {
+            background: var(--light-bg);
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info h3 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-stack i {
+            font-size: 2rem;
+            color: var(--text-color);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .tech-stack img.custom-icon {
+            width: 32px;
+            height: 32px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-stack i:hover,
+        .tech-stack img.custom-icon:hover {
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .about-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .about-card h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .skill-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .skill-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .tech-stack {
+                justify-content: center;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">About Me</h1>
+            <nav class="main-nav">
+                <a href="/">Home</a>
+                <a href="/about" class="active">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </header>
+        
+        <main class="about-content">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="https://avatars.githubusercontent.com/u/144527817?s=400&u=c16d6bac5aa346422a6ab9a760f23b09029a38b8&v=4" alt="Debjyoti Shit">
+                </div>
+                <div class="profile-info">
+                    <h2>Debjyoti Shit</h2>
+                    <h3>DevOps & Full Stack Developer</h3>
+                    <div class="tech-stack">
+                        <i class="fab fa-docker" title="Docker"></i>
+                        <i class="fab fa-kubernetes" title="Kubernetes"></i>
+                        <img src="https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg" class="custom-icon" title="Terraform">
+                        <i class="fab fa-aws" title="AWS"></i>
+                        <i class="fab fa-google" title="GCP"></i>
+                        <i class="fab fa-microsoft" title="Azure"></i>
+                        <i class="fab fa-jenkins" title="Jenkins"></i>
+                        <img src="https://www.vectorlogo.zone/logos/argoprojio/argoprojio-icon.svg" class="custom-icon" title="ArgoCD">
+                        <i class="fab fa-github" title="GitHub Actions"></i>
+                        <img src="https://www.vectorlogo.zone/logos/ansible/ansible-icon.svg" class="custom-icon" title="Ansible">
+                        <i class="fab fa-python" title="Python"></i>
+                        <i class="fab fa-node-js" title="Node.js"></i>
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-vuejs" title="Vue.js"></i>
+                        <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" class="custom-icon" title="MongoDB">
+                        <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" class="custom-icon" title="PostgreSQL">
+                        <img src="https://www.vectorlogo.zone/logos/redis/redis-icon.svg" class="custom-icon" title="Redis">
+                        <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" class="custom-icon" title="Kafka">
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h2><i class="fas fa-user-circle"></i> Professional Summary</h2>
+                <p>Full-stack developer and DevOps engineer with expertise in building scalable cloud-native applications and implementing robust CI/CD pipelines. Proficient in end-to-end system design, cloud infrastructure optimization, and full lifecycle application development. Focused on creating efficient development workflows and maintaining high-availability production environments.</p>
+            </div>
+            
+            <div class="skills-section">
+                <div class="skill-card">
+                    <h3><i class="fas fa-cogs"></i> DevOps Expertise</h3>
+                    <ul>
+                        <li>Container Orchestration (Docker, Kubernetes, OpenShift)</li>
+                        <li>CI/CD Systems (Jenkins, ArgoCD)</li>
+                        <li>Cloud Platforms (AWS, DigitalOcean)</li>
+                        <li>Infrastructure as Code (Terraform, AWS CDK)</li>
+                        <li>Serverless Architecture (AWS Lambda)</li>
+                        <li>Configuration Management (Ansible, Chef)</li>
+                        <li>GitOps Workflows (ArgoCD)</li>
+                        <li>Cluster Autoscaling (Cluster Autoscaler)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-code"></i> Development Stack</h3>
+                    <ul>
+                        <li>Languages: JavaScript/TypeScript, Python, Go, Java</li>
+                        <li>Frontend: React, Vue, Next.js, Webpack</li>
+                        <li>Backend: Node.js, Django, Spring Boot, Gin</li>
+                        <li>Mobile: React Native, Flutter</li>
+                        <li>Databases: PostgreSQL, MongoDB</li>
+                        <li>Web Servers: Nginx, Apache</li>
+                        <li>Build Tools: Bazel, Make, Gradle</li>
+                        <li>Package Management: npm, yarn, pip, Maven</li>
+                        <li>DevTools: VSCode, IntelliJ, Chrome DevTools</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-cloud"></i> Cloud Technologies</h3>
+                    <ul>
+                        <li>AWS Services (EC2, S3, Lambda, EKS, RDS)</li>
+                        <li>Google Cloud (GKE, Cloud Run, BigQuery)</li>
+                        <li>Azure (AKS, Functions, Cosmos DB)</li>
+                        <li>Serverless Framework & SAM</li>
+                        <li>Cloud Security (IAM, VPC, Security Groups)</li>
+                        <li>Cost Optimization Strategies</li>
+                        <li>Multi-cloud Architecture</li>
+                        <li>Disaster Recovery Planning</li>
+                        <li>Cloud Migration Strategies</li>
+                        <li>Edge Computing (Cloudflare Workers)</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
