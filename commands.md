@@ -57,6 +57,13 @@ docker network ls             # List all networks
 docker network prune          # Remove unused networks
 ```
 
+## Monitoring and Logging
+```sh
+docker logs <Container ID>           # View real-time and past logs of a container
+docker attach <Container ID>         # Attach to a running container’s input, output, and error streams
+nohup docker attach <Container ID> &> logs.txt & # Keep logs running even after logout and store them in logs.txt
+```
+
 ​
 ## Clean Up Everything (⚠️ Be Careful!)
 ```sh
