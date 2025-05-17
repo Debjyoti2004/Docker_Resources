@@ -1,0 +1,9 @@
+FROM mongo:latest
+
+ENV MONGO_INITDB_ROOT_USERNAME=root
+ENV MONGO_INITDB_ROOT_PASSWORD=admin
+
+EXPOSE 27017
+
+CMD ["mongod"]
+
